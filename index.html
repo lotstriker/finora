@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FINORA — Personal Finance</title>
+    
+    <!-- Favicon (Fixed) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>" />
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- Page-specific CSS -->
+    <style id="page-style"></style>
+</head>
+<body>
+    
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-chart-pie"></i>
+                <span>FINORA</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#dashboard" data-page="dashboard" class="active">
+                <i class="fas fa-th-large"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#transactions" data-page="transactions">
+                <i class="fas fa-list-ul"></i>
+                <span>Transactions</span>
+            </a>
+            <a href="#accounts" data-page="accounts">
+                <i class="fas fa-wallet"></i>
+                <span>Accounts</span>
+            </a>
+            <a href="#income" data-page="income">
+                <i class="fas fa-arrow-down"></i>
+                <span>Income</span>
+            </a>
+            <a href="#expenses" data-page="expenses">
+                <i class="fas fa-arrow-up"></i>
+                <span>Expenses</span>
+            </a>
+            <a href="#transfers" data-page="transfers">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Transfers</span>
+            </a>
+            <a href="#people" data-page="people">
+                <i class="fas fa-users"></i>
+                <span>People</span>
+            </a>
+            <a href="#loans" data-page="loans">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Loans</span>
+            </a>
+            <a href="#bid-save" data-page="bid-save">
+                <i class="fas fa-handshake"></i>
+                <span>Bid & Save</span>
+            </a>
+            <a href="#savings" data-page="savings">
+                <i class="fas fa-piggy-bank"></i>
+                <span>Savings</span>
+            </a>
+            <a href="#recurring" data-page="recurring">
+                <i class="fas fa-sync-alt"></i>
+                <span>Recurring</span>
+            </a>
+            <a href="#reports" data-page="reports">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="#settings" data-page="settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <button id="themeToggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </aside>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 id="pageTitle">Dashboard</h1>
+            <div class="topbar-actions">
+                <span id="currentDate"></span>
+            </div>
+        </header>
+        
+        <div class="page-container" id="pageContainer">
+            <!-- Pages will be loaded here dynamically -->
+        </div>
+    </main>
+    
+    <!-- ===== MODAL CONTAINER ===== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Modal</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <!-- ===== SCRIPTS (ALL 21 FILES) ===== -->
+    <script src="js/utils.js"></script>
+    <script src="lib/indexeddb-helper.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/ledger.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/transactions.js"></script>
+    <script src="js/accounts.js"></script>
+    <script src="js/income.js"></script>
+    <script src="js/expenses.js"></script>
+    <script src="js/transfers.js"></script>
+    <script src="js/people.js"></script>
+    <script src="js/loans.js"></script>
+    <script src="js/bid-save.js"></script>
+    <script src="js/savings.js"></script>
+    <script src="js/recurring.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/committee.js"></script>
+    <script src="js/loan-calculator.js"></script>
+    <script src="js/committee-calculator.js"></script>
+    <script src="js/recurring-calculator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
